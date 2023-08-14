@@ -1,0 +1,833 @@
+/* Outermost Container */
+
+.facultyOutermostContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Faculty Home Body */
+
+.Footer {
+  position: relative;
+  bottom: 0;
+  background-color: black;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Faculty functions  */
+
+.Faculty-fuctions {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 95%;
+  background-color: black;
+}
+
+.Faculty-Functions-list {
+  padding: 0;
+  margin: 0;
+}
+
+li.functionality-item {
+  padding: 1em;
+  margin: 1em;
+}
+
+/* profile  */
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  border-radius: 20px;
+  padding-top: 10px;
+  z-index: 10;
+  margin: 0 auto;
+  position: sticky;
+  top: 0 auto;
+  padding-bottom: 10px;
+}
+
+.profileInfo {
+  text-align: center;
+}
+
+.StudentProfileForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+  overflow: scroll;
+  width: 100vh;
+  max-height: 30rem;
+}
+
+.NameContainer,
+.EmailContainer,
+.phoneNo,
+.rollNoContainer,
+.universityRollNoContainer,
+.address,
+.yearContainer,
+.SemestorContainer,
+.branchContainer,
+.sectionContainer,
+.batchContainer,
+.JEERankContainer,
+.ReapRankContainer,
+.OthersContainer,
+.challanNoContainer {
+  display: flex;
+  padding: 2px;
+  /* flex-direction: column; */
+}
+
+.NameContainer label,
+.EmailContainer label,
+.phoneNo label,
+.rollNoContainer label,
+.universityRollNoContainer label,
+.address label,
+.yearContainer label,
+.SemestorContainer label,
+.branchContainer label,
+.sectionContainer label,
+.batchContainer label,
+.JEERankContainer label,
+.ReapRankContainer label,
+.OthersContainer label,
+.challanNoContainer label {
+  margin-bottom: 5px;
+}
+
+.NameContainer input,
+.EmailContainer input,
+.phoneNo input,
+.rollNoContainer input,
+.universityRollNoContainer input,
+.address input,
+.yearContainer select,
+.SemestorContainer select,
+.branchContainer input,
+.sectionContainer input,
+.batchContainer input,
+.JEERankContainer input,
+.ReapRankContainer input,
+.OthersContainer input,
+.challanNoContainer input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.StudentSubmit {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.StudentSubmit:hover {
+  background-color: #45a049;
+}
+
+#editProfileid {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editProfileid:hover {
+  background-color: #007095;
+}
+
+.crossbutton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  background: none;
+  color: black;
+  width: 15px;
+  height: 15px;
+  font-size: 20px;
+}
+
+/* faculty Navigation Bar */
+
+.studentHomediv {
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100vh;
+  height: 80px;
+  background: black;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.studentLogo {
+  font-size: 50px;
+  color: white;
+  width: min-content;
+}
+
+li .nav-linkstudent {
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.nav-linkstudent:hover {
+  background: rgb(69, 196, 228);
+}
+
+#pills-home-tab {
+  margin: 10px;
+}
+
+#pills-profile-tab {
+  margin: 10px;
+}
+
+#pills-contact-tab {
+  margin: 10px;
+}
+
+#profileContainerid {
+  width: 7;
+}
+
+/* mark attendance button */
+
+.facultyButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 80px;
+  height: 100vh;
+  /* position: relative; */
+}
+
+.attendanceReportButton {
+  margin: 0 auto;
+  height: 200px;
+  width: 300px;
+
+  background: rgb(64, 155, 234);
+  color: rgb(0, 0, 0);
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move 1s ease-in-out forwards alternate;
+}
+
+.attendanceReportButton:hover {
+  background: rgb(84, 225, 84);
+}
+
+/* navbars */
+
+.allNavbar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0%;
+    transform: translateX(30%);
+  }
+
+  80% {
+    opacity: 20%;
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+/* faculty home body */
+
+.facultyHomediv {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  height: 80px;
+  background: black;
+  padding: 10px;
+}
+
+/* personlaized navbar  */
+.FacultyPersonalizedNavbar {
+  width: 100%;
+  background: gray;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.personalizedcontent {
+  color: white;
+  background: none;
+  border-style: none;
+}
+
+/* .FacultyPersonalizedNavbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+} */
+
+.RollName {
+  color: white;
+}
+
+.name {
+  color: white;
+}
+
+/* faculty profile container */
+.newProfileContainer.faculty {
+  min-height: 90vh;
+}
+
+.newProfileContainer.faculty .tabs {
+  grid-row-end: 3;
+}
+
+.AchievementsCardsBlock {
+  height: 70vh;
+  overflow: auto;
+  padding-top: 2em;
+}
+.AchievementsCards {
+  width: 90%;
+  height: 80%;
+  background: rgb(209, 193, 193);
+  border-style: solid;
+
+  margin: 1rem;
+}
+
+.utilityButtonspan.faculty button {
+  font-size: auto;
+  background: transparent;
+  border-radius: 1vw;
+}
+
+.utilityButtonspan.faculty button:hover {
+  background: #d8abab;
+}
+
+.addAchievement {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.addAchievement textarea[type="text"],
+.addAchievement input[type="text"] {
+  background: transparent;
+  /* border-style: none; */
+
+  height: 80%;
+  width: 90%;
+  padding: 2em;
+  margin: 1em;
+}
+
+.addAchievement input[type="text"] {
+  height: 15%;
+}
+
+.timeTableButtonContainer {
+  /* padding-left: 2em; */
+  padding-bottom: 0;
+  margin-left: 3em;
+}
+
+.innerdiv {
+  width: 94%;
+  display: flex;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+div.timeTableButtonContainer button {
+  background-color: #c1911777;
+
+  font-size: clamp(2px, 2vw, 18 px);
+  width: clamp(6vh, 10%, 18vh);
+
+  /* border-radius: 1vh; */
+  border-style: solid;
+  border-width: thin;
+  min-height: 8vh;
+  padding: 0vh;
+  margin-right: 0;
+}
+
+div.timeTableButtonContainer button:hover {
+  background-color: rgba(193, 145, 23, 0.644);
+}
+
+.facultyHomeWindow {
+  min-height: 100vh;
+
+  background: transparent;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+}
+
+.facultyFunctionTabs {
+  background-color: rgb(211, 180, 180);
+  border-bottom: solid;
+  border-width: thin;
+}
+
+.facultyFunctionContent {
+  background-color: #d1c1c1;
+
+  scrollbar-track-color: rgba(105, 210, 161, 0.705);
+}
+
+.facultyFunctionTabs.tab {
+  padding: 0.5em;
+  border-radius: 0.3vw;
+  /* border-radius: 0; */
+  background-color: rgb(210, 171, 171);
+}
+
+.tab > button {
+  background: none;
+  border-style: none;
+  padding-left: 0;
+  width: 100%;
+  /* border-radius: 1vw; */
+  height: 100%;
+  display: flex;
+}
+
+button.facultyFunctionSubTab {
+  width: 100%;
+  height: 5%;
+  background-color: rgb(209, 193, 193);
+  border-bottom: solid;
+  padding: 0.5em;
+  border-width: thin;
+  margin: 0;
+  border-radius: 0.3vw;
+
+  /* position: absolute; */
+}
+
+.findStudentReport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.findStudentReportoption {
+  margin-right: 1em;
+}
+
+.findStudentReport label {
+  margin: 2em;
+}
+
+.reportchoice {
+  width: 0;
+  height: 0;
+  margin: 0;
+  position: absolute;
+  content-visibility: hidden;
+  border-style: none;
+  background: transparent;
+}
+
+/* .facultyFunctionTabs.tab:hover .reportchoice {
+  width: min-content;
+  height: min-content;
+  background: blue;
+  content-visibility: visible;
+  position: relative;
+  animation: blink 1s infinite;
+  border-style: inset;
+} */
+/* 
+@keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+} */
+
+.chooseMode {
+  backdrop-filter: blur(2px);
+  width: 100%;
+  min-height: 60vh;
+  padding: 15vh 45vh;
+  background: transparent;
+  position: absolute;
+}
+
+.chooseMode > button {
+  padding: 2.5em;
+  margin: 1em;
+  width: 17em;
+  height: 10em;
+  border-radius: 1vw;
+  background-color: rgba(117, 204, 181, 0.668);
+}
+
+.chooseMode > button:hover {
+  background-color: rgba(0, 179, 255, 0.668);
+}
+
+/* timeTable */
+.timeTableOuterContainer {
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+
+.timeTableHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ClasswiseReportContainer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  align-items: center;
+}
+
+.ClasswiseReportContainer.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.ClasswiseReportContainer.options > button {
+  padding: 3em;
+  border-radius: 1vw;
+  background-color: rgba(117, 204, 181, 0.668);
+}
+
+.ClasswiseReportContainer.options > button:hover {
+  background-color: rgba(0, 179, 255, 0.668);
+}
+
+.NotSelectedPop {
+  width: 83%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.451);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.NotSelectedPop > button {
+  padding: 1em 1.5em;
+  border-radius: 1vw;
+}
+
+/* subject Wise Attendance Report */
+
+.subjectWiseOption {
+  width: 100%;
+  min-height: 2em;
+  border: inset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reschedulePopup {
+  position: absolute;
+  z-index: 200;
+  width: 80%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reschedulePopup input {
+  margin: 1em;
+}
+
+.reschedulePopup button {
+  background-color: green;
+  color: white;
+  border-radius: 0.4em;
+  padding: 0.5em;
+  border-style: none;
+}
+
+.reschedulePopup button:hover {
+  background-color: rgb(1, 96, 1);
+}
+
+.rescheduledClassesContainer {
+  position: absolute;
+  width: 80%;
+  height: 50vh;
+  background-color: white;
+  z-index: 200;
+}
+
+.ExtraClassForm {
+  height: 50vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.ExtraClassForm form {
+  width: fit-content;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2em;
+  align-items: center;
+  border: none;
+}
+/* reschedule */
+
+.rescheduledClassesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 80vh;
+  overflow-y: scroll;
+  padding: 1em;
+  padding-top: 2em;
+  margin-top: 2em;
+}
+
+.rescheduledClassesContainer > div {
+  width: 80%;
+}
+
+.rescheduledClassesContainer .content {
+  height: max-content;
+  border-bottom: solid;
+  border-top: solid;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  width: 80%;
+}
+
+.content button {
+  background-color: #45a049;
+  border: inset;
+  border-color: black;
+  border-radius: 0.5vw;
+  color: white;
+}
+
+.content p {
+  font-weight: bold;
+}
+
+.content span {
+  font-weight: lighter;
+}
+
+.FacultyPersonalizedNavbar.Content {
+  display: flex;
+  width: fit-content;
+  justify-content: flex-end;
+}
+.openMenuButton {
+  border: none;
+  z-index: -100;
+  background: gray;
+  margin: 0;
+  width: max-content;
+  right: 0;
+  font-size: 2em;
+  color: white;
+  position: relative;
+  right: 0;
+}
+.FacultyPersonalizedNavbar.Content button {
+  margin: 1em;
+}
+
+button.tabMenu {
+  z-index: -10;
+}
+
+.tabMenu {
+  position: absolute;
+  z-index: -10;
+}
+
+.openMenuButtonBack {
+  z-index: -10;
+}
+
+.dataTableContent {
+  width: 78%;
+}
+
+@media screen and (max-width: 850px) {
+  .FacultyPersonalizedNavbar.Content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    z-index: 100;
+    right: 0;
+  }
+
+  .FacultyPersonalizedNavbar.Content button:hover {
+    background-color: yellow;
+  }
+
+  .openMenuButton {
+    background: gray;
+    z-index: 10;
+    height: 100%;
+  }
+
+  .openMenuButtonBack {
+    background: none;
+    border: none;
+    color: white;
+    width: min-content;
+  }
+
+  .tabMenu {
+    position: static;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+  }
+
+  .facultyFunctionContent {
+    width: 95vw;
+  }
+
+  .facultyFunctionTabs.tab {
+    position: static;
+  }
+
+  .facultyHomeWindow {
+    overflow: auto;
+  }
+
+  .defaultTab.tab {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6em;
+  }
+
+  .timeTableButtonContainer {
+    margin-left: 0;
+  }
+
+  .timeTableButtonContainer button {
+    word-wrap: break-word;
+    overflow: wrap;
+  }
+
+  .chooseMode {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    padding: 3em;
+  }
+
+  .chooseMode button {
+    padding: 0;
+    margin: 0;
+    height: 4rem;
+  }
+
+  .reschedulePopup {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  .reschedulePopup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reschedulePopup p {
+    width: 50%;
+  }
+
+  .ExtraClassForm {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  .ExtraClassForm > button {
+    border: none;
+  }
+}

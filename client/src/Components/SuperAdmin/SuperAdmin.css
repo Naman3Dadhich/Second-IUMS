@@ -1,0 +1,214 @@
+.homeProfile {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  /* position: absolute; */
+  padding-top: 200px;
+  padding-bottom: 200px;
+  z-index: auto;
+}
+
+.profileContainer {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  height: min-content;
+  z-index: auto;
+}
+
+.profileInfo {
+  text-align: center;
+}
+
+.facultyCards {
+  z-index: -100;
+}
+
+.StudentProfileForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+  overflow: scroll;
+  width: 100vh;
+  max-height: 30rem;
+}
+
+.NameContainer,
+.EmailContainer,
+.phoneNo,
+.rollNoContainer,
+.universityRollNoContainer,
+.address,
+.yearContainer,
+.SemestorContainer,
+.branchContainer,
+.sectionContainer,
+.batchContainer,
+.JEERankContainer,
+.ReapRankContainer,
+.OthersContainer,
+.challanNoContainer {
+  display: flex;
+  padding: 2px;
+  /* flex-direction: column; */
+}
+
+.NameContainer label,
+.EmailContainer label,
+.phoneNo label,
+.rollNoContainer label,
+.universityRollNoContainer label,
+.address label,
+.yearContainer label,
+.SemestorContainer label,
+.branchContainer label,
+.sectionContainer label,
+.batchContainer label,
+.JEERankContainer label,
+.ReapRankContainer label,
+.OthersContainer label,
+.challanNoContainer label {
+  margin-bottom: 5px;
+}
+
+.NameContainer input,
+.EmailContainer input,
+.phoneNo input,
+.rollNoContainer input,
+.universityRollNoContainer input,
+.address input,
+.yearContainer select,
+.SemestorContainer select,
+.branchContainer input,
+.sectionContainer input,
+.batchContainer input,
+.JEERankContainer input,
+.ReapRankContainer input,
+.OthersContainer input,
+.challanNoContainer input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.StudentSubmit {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.StudentSubmit:hover {
+  background-color: #45a049;
+}
+
+#editProfileid {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#editProfileid:hover {
+  background-color: #007095;
+}
+/* superuser navigation bar */
+
+.studentHomediv {
+  /* position: relative; */
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 80px;
+  background: black;
+  z-index: 100;
+}
+
+.nav.nav-pills.mb-3 {
+  display: flex;
+  justify-content: flex-end;
+  right: 10px;
+  z-index: 100;
+}
+
+li .nav-linkstudent {
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.nav-linkstudent:hover {
+  background: rgb(69, 196, 228);
+}
+
+#pills-home-tab {
+  margin: 10px;
+}
+
+#pills-profile-tab {
+  margin: 10px;
+}
+
+#pills-contact-tab {
+  margin: 10px;
+}
+
+#profileContainerid {
+  width: 70%;
+}
+
+.nav-linkstudent {
+  position: relative;
+  height: 100px;
+}
+
+.superuserHomeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slide.swiper-slid.e-active {
+  display: flex;
+  justify-content: start;
+}
+
+.SuperPersonalizedNavbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+}
+
+.RollName {
+  color: white;
+}
+
+.name {
+  color: white;
+}
+
+.systemAdminProfileOutermost {
+  position: fixed;
+}
+
+.newProfileContainer.systemAdminProfile {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 1fr;
+}

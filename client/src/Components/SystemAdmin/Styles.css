@@ -1,0 +1,144 @@
+div#functionBlocks .container:nth-child(2n -1) {
+  /* display: flex; */
+  width: 100%;
+  /* justify-content: flex-end; */
+}
+/* common to all */
+div.container:nth-child(2n) {
+  /* white-space:normal; */
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to right, rgba(210, 57, 57, 0.708), white);
+}
+
+div.container:nth-child(2n-1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 300px;
+  background: linear-gradient(to left, rgba(0, 136, 255, 0.619), white);
+}
+
+button .profileContainer {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/* navbar */
+#profileContaienrid {
+  width: 40%;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+  position: relative;
+  width: 100%;
+}
+
+/* Upload Time Table */
+
+.container > #excelFile {
+  width: 20rem;
+  height: 4rem;
+}
+
+/* profile container */
+.profileContainer {
+  z-index: 10;
+
+  width: 30%;
+  height: 200px;
+  background: linear-gradient(to bottom right, white, rgb(166, 166, 166));
+  animation: profile-open 1s linear forwards alternate;
+}
+
+.profileBlock {
+  position: relative;
+  padding: 20px;
+  display: grid;
+}
+
+.ProfileDetails {
+  display: grid;
+  opacity: 100%;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.FacultyName {
+  font-size: 40px;
+  border-color: black;
+  border-style: dashed;
+  border-left: none;
+  border-right: none;
+  border-width: 5px;
+  border-top: none;
+}
+
+.FacultyDesignation {
+  font-size: 20px;
+
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.FacultyEmail {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.FacultyAOE {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.FacultyQualification {
+  width: 80%;
+  font-size: 20px;
+  height: 20rem;
+  background-color: white;
+}
+
+#editProfileid {
+  height: 40px;
+}
+
+.profileActions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.editProfileButtonContainer {
+  margin-top: 10px;
+}
+
+.profileInfo {
+  width: 200px;
+  margin-top: 50px;
+}
+
+.systemAdminProfileOutermost {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(30px);
+  position: fixed;
+  margin-top: -5em;
+  margin-bottom: 1em;
+}
+
+.systemAdminProfile {
+  /* background: transparent; */
+
+  position: fixed;
+  margin: 5vh;
+}

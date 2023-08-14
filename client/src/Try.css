@@ -1,0 +1,60 @@
+.tryWindow {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: rgb(251, 251, 251);
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+}
+
+.tryTabs {
+  background-color: pink;
+}
+
+.tryContent {
+  background-color: rgba(255, 0, 0, 0.397);
+}
+
+.tab {
+  padding: 0.5em;
+  border-radius: 1vw;
+  background-color: rgba(240, 137, 137, 0.484);
+}
+
+.subTryTab {
+  width: 0%;
+  height: 5%;
+  background-color: rgba(228, 76, 132, 0.452);
+  padding: 0;
+  margin: 0;
+  border-radius: 1vw;
+  /* position: absolute; */
+}
+
+.tryasureCotainer {
+  width: 50vh;
+  height: 50vh;
+  margin: 20vh auto;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.progjar {
+  border-radius: 100vw;
+  height: 15vw;
+  width: 15vw;
+  margin: 0% auto;
+  background: linear-gradient(to right, red, blue);
+
+  position: fixed;
+  z-index: 10;
+}
+
+.liq {
+  background-color: skyblue;
+  background: linear-gradient(to right, red, blue);
+  position: relative;
+  z-index: 100;
+}

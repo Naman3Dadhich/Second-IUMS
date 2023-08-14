@@ -1,0 +1,171 @@
+html {
+  background: rgba(0, 0, 0, 0.588);
+}
+
+.printform {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 0 30vh;
+  max-width: 80%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  border-style: solid;
+}
+
+.pageHeading {
+  background-color: rgb(255, 255, 255);
+  margin: 1em;
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+  border-style: solid;
+}
+
+.pageContent {
+  font-size: 20px;
+  width: 85%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  display: grid;
+  margin: 1em;
+  grid-template-areas: "header", "content , content", "header", "content",
+    "content";
+}
+
+p.formHeading {
+  background-color: rgba(0, 0, 0, 0.292);
+  font-size: 30px;
+  grid-area: "header";
+  border-style: solid;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+span.input {
+  grid-area: "content";
+  margin-left: 5px;
+  margin-right: 10px;
+  border: 3px solid rgba(112, 110, 110, 0.354);
+
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  max-width: max-content;
+}
+
+.personalDetailsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.academicDetailsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.bankDetailsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.feeDetailsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+@media print and (orientation: portrait) {
+  p.pageHeading {
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 376px) {
+  p.formHeading {
+    max-width: 61%;
+    font-size: 15px;
+    background: none;
+  }
+
+  .personalDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .academicDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .bankDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .feeDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  p.formHeading {
+    max-width: 61%;
+    font-size: 15px;
+    background: none;
+  }
+
+  .personalDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .academicDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .bankDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+
+  .feeDetailsContent {
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 7vh);
+    overflow-wrap: normal;
+    padding-left: 1em;
+  }
+}

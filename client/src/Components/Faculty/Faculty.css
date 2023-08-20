@@ -408,7 +408,7 @@ div.timeTableButtonContainer button:hover {
 }
 
 .facultyFunctionTabs {
-  position: absolute;
+  position: relative;
   background-color: rgb(211, 180, 180);
   border-bottom: solid;
   border-width: thin;
@@ -760,7 +760,6 @@ button.tabMenu {
   .facultyFunctionTabs {
     position: relative;
     padding-top: 2em;
-    height: 100%;
   }
 
   button.tabMenu {

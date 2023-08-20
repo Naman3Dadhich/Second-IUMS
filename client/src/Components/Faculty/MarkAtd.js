@@ -20,7 +20,16 @@ function MarkATd({
 
   const [step, setStep] = useState(0);
 
-  //middleware
+  console.log({
+    facultyName,
+    subject,
+    branch,
+    section,
+    batch,
+    semester,
+  });
+
+  //middleware'
 
   const navigate = useNavigate();
 
@@ -56,13 +65,13 @@ function MarkATd({
   const [search, setSearch] = useState("");
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [attendanceData, setAttendanceData] = useState({
-    facultyName: "CP",
-    academicSession: "21",
-    subject: "CN",
-    branch: "Cs",
-    semester: "5",
-    section: "B",
-    batch: "B4",
+    facultyName,
+    academicSession: "",
+    subject,
+    branch,
+    semester,
+    section,
+    batch,
   });
 
   const [sendingData, setSendingData] = useState([]);
@@ -109,11 +118,12 @@ function MarkATd({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          admissionYear: "21",
-          branch: "Cs",
-          academicSession: "21",
-          semester: "5",
-          batch: "B4",
+          facultyName,
+          subject,
+          branch,
+          section,
+          batch,
+          semester,
         }),
       });
       const data = await res.json();
@@ -219,10 +229,6 @@ function MarkATd({
           headers: { "Content-type": "application/json" },
           body: JSON.stringify({
             sendingData,
-            admissionYear: "21",
-            academicSession: "21",
-            subject: "CN",
-            batch: "B4",
           }),
         });
 

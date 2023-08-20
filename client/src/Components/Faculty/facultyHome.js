@@ -907,14 +907,6 @@ function FacultyHome() {
 
   useEffect(() => {
     if (timeTableShiSeChal) {
-      if (window.screen.width < 850) {
-        setOpenMenu(false);
-      }
-
-      if (window.screen.width >= 850) {
-        console.log(window.screen.width);
-        setOpenMenu(true);
-      }
       const storeData = localStorage.getItem("userData");
       const email = JSON.parse(storeData);
       console.log(email);
@@ -948,6 +940,20 @@ function FacultyHome() {
 
     timeTableShiSeChal = true;
   }, [window.screen.width]);
+
+  const [screenChange, setScreenChange] = useState(window.screen.width);
+  const [screenC, setScreenC] = useState(window.screen);
+
+  useEffect(() => {
+    if (window.screen.width >= 850) {
+      setOpenMenu(true);
+    }
+    if (window.screen.width < 850) {
+      setOpenMenu(false);
+    }
+    console.log(window.screen.width);
+    setScreenChange(window.screen.width);
+  }, [window.innerHeight]);
 
   //parsing time table data
 
@@ -1089,7 +1095,7 @@ function FacultyHome() {
                   onClick={() => {
                     setAttendanceReport(false);
                     setProfile(!profile);
-                    setOpenMenu(false);
+                    if (window.screen.width < 850) setOpenMenu(false);
                   }}
                 >
                   Profile
@@ -1108,7 +1114,7 @@ function FacultyHome() {
                   onClick={() => {
                     setProfile(false);
                     setAttendanceReport(!attendanceReport);
-                    setOpenMenu(false);
+                    if (window.screen.width < 850) setOpenMenu(false);
                   }}
                 >
                   {" "}

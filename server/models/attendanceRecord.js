@@ -90,6 +90,6 @@ AttendanceRecord.pre("save", function (next) {
 // date: { type: String, default: "" },
 // status: { type: String, default: "" },
 
-const attendanceRecord = mongoose.model("ATTENDANCERECORD", AttendanceRecord);
+const attendanceRecord = mongoose.model("TRYATD", AttendanceRecord);
 
 module.exports = attendanceRecord;

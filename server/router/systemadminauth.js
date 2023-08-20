@@ -367,12 +367,15 @@ router.put("/profile/systemadmin/edit", async (req, res) => {
 
 router.put("/upload/timeTable", async (req, res) => {
   const { email, academicSession, excelData } = req.body;
+
+  console.log(excelData);
   try {
     if (!email || !academicSession) {
       return res.status(422).json({ error: "please provide required details" });
     }
     console.log(email);
     console.log(academicSession);
+    console.log("excel data ", excelData);
     const faculty = await Faculty.findOne({ email });
 
     if (!faculty) {
@@ -403,30 +406,30 @@ router.put("/upload/timeTable", async (req, res) => {
     } catch (error) {
       console.log(error);
     }
-    try {
-      console.log(academicSession);
+    // try {
+    //   console.log(academicSession);
 
-      // Find and update the timetable for the specified academicSession
-      const check = faculty.timeTables.find(
-        (obj) => obj.academicSession === academicSession
-      );
-      console.log(check);
-      if (check === null) {
-        faculty.timeTables.push({
-          academicSession: academicSession,
-          odd: timeTableList,
-        });
-      } else if (check) {
-        check.even = timeTableList;
-        faculty.markModified("timeTables");
-      }
+    //   // Find and update the timetable for the specified academicSession
+    //   const check = faculty.timeTables.find(
+    //     (obj) => obj.academicSession === academicSession
+    //   );
+    //   console.log(check);
+    //   if (check === null) {
+    //     faculty.timeTables.push({
+    //       academicSession: academicSession,
+    //       odd: timeTableList,
+    //     });
+    //   } else if (check) {
+    //     check.even = timeTableList;
+    //     faculty.markModified("timeTables");
+    //   }
 
-      // Save the updated timeTables
-      await faculty.save();
-    } catch (error) {
-      console.log(error);
-      console.log("error in second save");
-    }
+    //   // Save the updated timeTables
+    //   await faculty.save();
+    // } catch (error) {
+    //   console.log(error);
+    //   console.log("error in second save");
+    // }
 
     res.status(201).json({
       message: "Time Table uploaded successfully",

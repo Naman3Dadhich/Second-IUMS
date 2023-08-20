@@ -43,7 +43,13 @@
 .navbarAlign {
   width: 100vw;
   display: flex;
+
   justify-content: flex-end;
+}
+.navbarAlign > div {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
 }
 
 .navbar-container ul {
@@ -120,6 +126,10 @@
   transition: opacity 0.7s ease-in-out;
   position: relative;
   flex-wrap: wrap;
+}
+
+.loginContent {
+  width: 80%;
 }
 
 .loginImageDiv {
@@ -502,11 +512,12 @@ div.homeheading img {
 .homeparanew {
   display: flex;
   padding-bottom: 70px;
-  font-size: 35px;
+  font-size: clamp(10px, 4vw, 35px);
   position: absolute;
   padding-top: 100px;
   margin-left: 25px;
   padding-bottom: 50px;
+
   width: max-content;
   /* left: 60px;
   bottom: 50px; */
@@ -516,16 +527,17 @@ div.homeheading img {
 
 .homeContent::after {
   content: "Welcome";
-  font-size: 60px;
+  font-size: clamp(40px, 6vw, 60px);
 }
 
-.home .homepara {
-  margin-top: 500px;
+.homepara {
+  /* margin-top: 500px; */
+  font-size: clamp(15px, 4vw, 30px);
 }
 
 .homepara::after {
   content: "Take You Forward";
-  font-size: 40px;
+  font-size: clamp(15px, 4vw, 40px);
 }
 
 .happen {
@@ -555,12 +567,17 @@ div.homeheading img {
   justify-content: center;
   /* width: 100%; */
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: clamp(25px, 4vw, 30px);
   text-decoration: none;
 }
 
 .aboutpara {
-  font-size: 14px;
+  font-size: clamp(10px, 2vw, 15px);
+  /* width: 100%; */
+}
+
+.aboutcontainer a {
+  font-size: clamp(10px, 2vw, 30px);
   /* width: 100%; */
 }
 
@@ -729,7 +746,7 @@ div.homeheading img {
   }
 
   .homeparanew {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .feeling {
@@ -767,6 +784,15 @@ div.homeheading img {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .navbarAlign {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
 @media screen and (max-width: 380px) {
   .functionality-list {
     font-size: 4vw;
@@ -774,5 +800,23 @@ div.homeheading img {
 
   .functionality-header {
     font-size: 2vw;
+  }
+
+  .Block {
+    width: 95%;
+  }
+
+  .loginImage {
+    width: 0;
+  }
+
+  .loginContent > span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newUser {
+    display: flex;
+    justify-content: flex-start;
   }
 }

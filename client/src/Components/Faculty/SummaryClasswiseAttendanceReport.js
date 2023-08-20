@@ -8,6 +8,7 @@ const DetailedClasswiseAttendanceReport = ({ studentDetailData }) => {
   const [columns, setColumns] = useState(studentDetailData);
 
   console.log(studentDetailData);
+
   // const Data = [
   //   {
   //     rollNo: 250,
@@ -111,7 +112,10 @@ const DetailedClasswiseAttendanceReport = ({ studentDetailData }) => {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      let newStr = Object.keys(filteredUsers[0]);
+      let newStr = [];
+      if (filteredUsers.length > 0) {
+        newStr = Object.keys(filteredUsers[0]);
+      }
 
       console.log("NEWSTR", newStr);
 
@@ -136,9 +140,13 @@ const DetailedClasswiseAttendanceReport = ({ studentDetailData }) => {
     return <Export onExport={() => downloadCSV()} />;
   }, []);
 
+  // if (!studentDetailData) {
+  //   return <h1>Loading</h1>;
+  // }
+
   return (
     <div className="dataTableContent">
-      {columns ? (
+      {columns && studentDetailData.length > 0 ? (
         <DataTable
           title="Class wise Detiled Attendance Report"
           columns={columns}

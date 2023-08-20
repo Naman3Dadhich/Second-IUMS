@@ -374,7 +374,7 @@ li .nav-linkstudent {
 }
 
 .innerdiv {
-  width: 94%;
+  width: 95%;
   display: flex;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -384,12 +384,13 @@ div.timeTableButtonContainer button {
   background-color: #c1911777;
 
   font-size: clamp(2px, 2vw, 18 px);
-  width: clamp(6vh, 10%, 18vh);
+  width: clamp(5vh, 10%, 18vh);
 
   /* border-radius: 1vh; */
   border-style: solid;
   border-width: thin;
   min-height: 8vh;
+
   padding: 0vh;
   margin-right: 0;
 }
@@ -407,19 +408,22 @@ div.timeTableButtonContainer button:hover {
 }
 
 .facultyFunctionTabs {
+  position: relative;
   background-color: rgb(211, 180, 180);
   border-bottom: solid;
   border-width: thin;
 }
 
 .facultyFunctionContent {
+  padding-top: 20px;
+  padding-left: 1em;
+  width: 82.2vw;
   background-color: #d1c1c1;
-
-  scrollbar-track-color: rgba(105, 210, 161, 0.705);
 }
 
 .facultyFunctionTabs.tab {
   padding: 0.5em;
+
   border-radius: 0.3vw;
   /* border-radius: 0; */
   background-color: rgb(210, 171, 171);
@@ -522,8 +526,10 @@ button.facultyFunctionSubTab {
 .timeTableHeading {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: 0;
 }
 
 .ClasswiseReportContainer {
@@ -704,12 +710,16 @@ button.facultyFunctionSubTab {
 }
 
 button.tabMenu {
-  z-index: -10;
-}
-
-.tabMenu {
   position: absolute;
-  z-index: -10;
+  color: yellow;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  font-size: 0;
+  background: none;
+  z-index: 1;
+  border: none;
 }
 
 .openMenuButtonBack {
@@ -717,7 +727,7 @@ button.tabMenu {
 }
 
 .dataTableContent {
-  width: 78%;
+  width: 98%;
 }
 
 @media screen and (max-width: 850px) {
@@ -747,23 +757,30 @@ button.tabMenu {
     width: min-content;
   }
 
-  .tabMenu {
-    position: static;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
+  .facultyFunctionTabs {
+    position: relative;
+    padding-top: 2em;
+  }
+
+  button.tabMenu {
+    position: absolute;
+    font-size: 1.5em;
+    width: 20px;
+    height: 20px;
+    left: 0;
     top: 0;
-    right: 0;
+    padding: 0;
+    margin: 0;
     background: none;
     border: none;
+    color: yellow;
+    z-index: 1;
   }
 
   .facultyFunctionContent {
-    width: 95vw;
-  }
-
-  .facultyFunctionTabs.tab {
-    position: static;
+    width: 100vw;
+    padding-left: 3em;
+    padding-right: 0;
   }
 
   .facultyHomeWindow {
@@ -776,13 +793,21 @@ button.tabMenu {
     margin: 0.6em;
   }
 
-  .timeTableButtonContainer {
+  .timeTableButtonContainers {
     margin-left: 0;
+    padding: 0;
+  }
+
+  .innerdiv {
+    width: 100%;
+    margin: 0;
   }
 
   .timeTableButtonContainer button {
     word-wrap: break-word;
     overflow: wrap;
+    max-height: 8vh;
+    font-size: clamp(8px, 2vw, 20px);
   }
 
   .chooseMode {

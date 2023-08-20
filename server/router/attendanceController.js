@@ -10,14 +10,6 @@ const attendanceRecord = require("../models/attendanceRecord");
 const Student = require("../models/studentSchema");
 const { trusted } = require("mongoose");
 
-router.post("/sendLocation", (req, res) => {
-  const { latitude, longitude } = req.body;
-  // Do something with the received geolocation data (e.g., store it in a database)
-
-  // Respond with a success message
-  res.json({ message: "Geolocation data received successfully" });
-});
-
 // api to fetch required student details
 router.post("/markAttendance/studentList", async (req, res) => {
   const {
@@ -27,14 +19,14 @@ router.post("/markAttendance/studentList", async (req, res) => {
     semester,
     batch,
   } = req.body;
-  console.log(req.body);
+  console.log("stutendataComing", req.body);
 
-  if (!academicSession || !studentBranch) {
+  if (!studentBranch) {
     return res.status(422).json({ error: "Please fill and branch" });
   }
 
   try {
-    const reqBatch = [batch1, batch2];
+    // const reqBatch = [batch1, batch2];
     // const regex = new RegExp(`^${admissionYear}/`);
     // rollNo: { $regex: regex }
 
@@ -42,16 +34,17 @@ router.post("/markAttendance/studentList", async (req, res) => {
       $and: [
         // { rollNo: { $regex: regex } },
         { branch: studentBranch },
-        { semester: semester },
-        { batch: { $in: batch } },
+        // { semester: semester },
+        // { batch: { $in: batch } },
       ],
     }).select("name rollNo ");
 
+    console.log("getstudent", getStudent);
     if (!getStudent || getStudent.length === 0) {
       return res.status(422).json({ error: "Student list not found" });
     }
 
-    res.status(201).json(getStudent);
+    return res.status(201).json(getStudent);
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: "Internal server error" });

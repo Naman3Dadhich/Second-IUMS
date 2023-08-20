@@ -78,7 +78,7 @@ const Body = () => {
               src="https://cdn.discordapp.com/attachments/1110615388682727524/1127849158439600249/Lovepik_com-611647791-Mobile_phone_product_login_interface.png"
             />
           </div>
-          <div>
+          <div className="loginContent">
             {/* <a
               href="/"
               style={{

@@ -26,7 +26,7 @@ const StudentWiseForm = ({
     name: "",
   });
 
-  console.log(studentSub);
+  console.log(studentDetailData);
 
   let Data = null;
   const [resFind, setResFind] = useState(false);
@@ -750,9 +750,9 @@ function AttendanceReport({
                 Lab: Lab,
                 subject: subject,
                 batch: batch,
-                academicSession: acadSession,
+                academicSession: " ",
                 semester: semester,
-                section: section,
+                section: "AB",
               }),
             });
             const valueData = res.then((data) => data.json());

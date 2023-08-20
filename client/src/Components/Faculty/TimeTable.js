@@ -281,14 +281,17 @@ const Body = ({
   return (
     <>
       <div className="timeTableHeading">
-        <h4>
-          <p>Academic Session (22'23)</p>
-        </h4>
-
         <h5>
-          {" "}
-          <p>even semester</p>
+          <p>DEPARTMENT OF COMPUTER SCIENCE AND ENDD. RTU,Kota</p>
         </h5>
+        <h5>
+          <p>ODD SEM. July-23 to Dec-23 - 2023-2024</p>
+        </h5>
+
+        {/* <h6>
+          {" "}
+          <p>ODD SEM</p>
+        </h6> */}
       </div>
       {timeTableData ? (
         <>
@@ -529,7 +532,7 @@ const MakingButton = ({
 
   return (
     <>
-      <div className="timeTableButtonContainer">
+      <div className="timeTableButtonContainers">
         {prop ? (
           prop.map((column, colindex) => {
             return (
@@ -665,6 +668,7 @@ function TimeTable({
               branch={branch}
               batch={batch}
               subject={subject}
+              semester={semester}
             />
           </>
         ) : qratted ? (
@@ -675,6 +679,7 @@ function TimeTable({
             branch={branch}
             batch={batch}
             subject={subject}
+            semester={semester}
           />
         ) : (
           <Body

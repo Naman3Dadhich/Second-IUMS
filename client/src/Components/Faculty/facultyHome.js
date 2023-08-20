@@ -939,7 +939,7 @@ function FacultyHome() {
     }
 
     timeTableShiSeChal = true;
-  }, [window.screen.width]);
+  }, []);
 
   const [screenChange, setScreenChange] = useState(window.screen.width);
   const [screenC, setScreenC] = useState(window.screen);
@@ -1123,7 +1123,7 @@ function FacultyHome() {
                 <button
                   className="personalizedcontent"
                   onClick={() => {
-                    window.location.href = "/";
+                    window.location.href = "/Faculty/FacultyLogin";
                   }}
                 >
                   Log Out

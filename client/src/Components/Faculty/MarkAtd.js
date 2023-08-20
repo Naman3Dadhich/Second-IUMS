@@ -294,9 +294,10 @@ function MarkATd({
               onClick={(e) => {
                 const checkName = e.target.name;
                 const checked = e.target.checked;
-
-                console.log(checked);
-                handleCheckboxChange(checkName, checked, studentdata);
+                if (!attendancePending) {
+                  console.log(checked);
+                  handleCheckboxChange(checkName, checked, studentdata);
+                }
               }}
               className="custom-checkbox"
               style={{ width: "23px", height: "23px" }}
@@ -305,10 +306,11 @@ function MarkATd({
           id: 3,
         },
       ]);
+
       setPending(false);
     }, 1000);
     return () => clearTimeout(timeout);
-  }, [studentdata]);
+  }, [studentdata, attendancePending]);
 
   const debounceSearch = useCallback(
     (searchValue) => {

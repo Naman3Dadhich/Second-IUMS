@@ -282,7 +282,7 @@ const Body = ({
     <>
       <div className="timeTableHeading">
         <h5>
-          <p>DEPARTMENT OF COMPUTER SCIENCE AND ENDD. RTU,Kota</p>
+          <p>DEPARTMENT OF COMPUTER SCIENCE AND ENGG. RTU,Kota</p>
         </h5>
         <h5>
           <p>ODD SEM. July-23 to Dec-23 - 2023-2024</p>

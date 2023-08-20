@@ -762,6 +762,10 @@ button.tabMenu {
     padding-top: 2em;
   }
 
+  .facultyFunctionTabs.tab {
+    position: relative;
+  }
+
   button.tabMenu {
     position: absolute;
     font-size: 1.5em;

@@ -36,6 +36,7 @@ const QrAttendance = ({
         academicSession: incrementedAcademicSession,
       },
     };
+
     const res = await fetch("/markAttendance/faculty/QR/markingAbsent", {
       method: "PUT",
       headers: {
@@ -116,7 +117,7 @@ const QrAttendance = ({
           CompleteAtd();
         }}
       >
-        Complete Attendance
+        Submit Attendance
       </button>
     </>
   );

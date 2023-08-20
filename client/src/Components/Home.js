@@ -105,25 +105,27 @@ const Body = () => {
         <p className="homeparanew">
           <RenderParagraphs />
         </p>
-        <Swiper
-          spaceBetween={10}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide id="i1"></SwiperSlide>
-          <SwiperSlide id="i2"></SwiperSlide>
+        <div className="swiperImage">
+          <Swiper
+            spaceBetween={10}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide id="i1"></SwiperSlide>
+            <SwiperSlide id="i2"></SwiperSlide>
 
-          <SwiperSlide id="i4"></SwiperSlide>
-        </Swiper>
+            <SwiperSlide id="i4"></SwiperSlide>
+          </Swiper>
+        </div>
       </div>
 
       <div className="feeling" id="feelingid">

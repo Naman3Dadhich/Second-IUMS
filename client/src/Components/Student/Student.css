@@ -459,6 +459,7 @@ li .nav-linkstudent {
 .container {
   display: flex;
   width: 100%;
+  z-index: 0;
 }
 
 .block-33 {
@@ -527,6 +528,7 @@ li .nav-linkstudent {
   justify-content: space-between;
   background-color: grey;
   position: sticky;
+  z-index: 1;
 }
 
 .personalizedcontent:hover {
@@ -867,3 +869,56 @@ span.editprofilebutton {
 /* .progressjar {
   background-color: blue;
 } */
+
+.openMenu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0;
+}
+
+.navbarFunctions {
+  z-index: 100;
+}
+
+@media screen and (max-width: 850px) {
+  .navbarFunctions > button.openMenu.out {
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    font-size: 1.3em;
+    background: grey;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbarFunctions > button.openMenu {
+    display: flex;
+    justify-content: end;
+    height: 100%;
+    font-size: 1em;
+    background: black;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbarFunctions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    background: black;
+    z-index: 100;
+  }
+
+  .navbarFunctions button {
+    margin: 0.2em;
+  }
+
+  .navbarFunctions button:hover {
+    background-color: yellow;
+  }
+}

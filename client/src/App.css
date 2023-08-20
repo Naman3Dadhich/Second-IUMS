@@ -608,6 +608,7 @@ div.homeheading img {
 .feelingcontent {
   display: flex;
   width: 50%;
+  height: min-content;
   flex-direction: column;
   justify-content: center;
   padding-right: 10px;
@@ -658,6 +659,7 @@ div.homeheading img {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* overflow: hidden; */
 }
 
 #i1 {
@@ -754,6 +756,7 @@ div.homeheading img {
     margin: 0;
     padding: 0;
     display: flex;
+    height: min-content;
     justify-content: center;
     flex-direction: column;
     background-image: url("../public/iupk/a.jpeg");
@@ -782,9 +785,21 @@ div.homeheading img {
     padding: 0;
     width: 100vw;
   }
+
+  #i1 {
+    clip-path: inset(50px 50px 20px 80px sqaure 100px);
+  }
+
+  #i2 {
+    clip-path: inset(50px 50px 20px 80px sqaure 100px);
+  }
+
+  #i3 {
+    clip-path: inset(50px 50px 20px 80px sqaure 100px);
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (max-height: 2000px) {
   .navbarAlign {
     width: 100vw;
     display: flex;
@@ -793,7 +808,18 @@ div.homeheading img {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (min-width: 750px) and (min-height: 1500px) {
+  .feelingimage {
+    width: 50vw;
+  }
+
+  .feelingcontent {
+    position: absolute;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
   .functionality-list {
     font-size: 4vw;
   }
@@ -811,12 +837,76 @@ div.homeheading img {
   }
 
   .loginContent > span {
+    width: 100%;
+    flex-wrap: wrap;
     display: flex;
-    flex-direction: column;
+  }
+  .loginContent > span a {
+    padding-left: 1.2em;
+    padding-top: 1em;
   }
 
   .newUser {
     display: flex;
     justify-content: flex-start;
+  }
+
+  .swiperImage {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    /* width: 100vw; */
+  }
+
+  #i1 {
+    overflow-x: hidden;
+    background-size: 150vh 100vh;
+    /* clip-path: outset(20%); */
+  }
+
+  #i2 {
+    overflow-x: hidden;
+    background-size: 150vh 100vh 50%;
+  }
+
+  #i3 {
+    overflow-x: hidden;
+    background-size: 150vh 100vh;
+  }
+
+  .homeparanew {
+    width: 90%;
+  }
+}
+
+@media screen and (min-height: 1150px) and (max-height: 2000px) {
+  body {
+    height: 100vh;
+  }
+
+  .HomeBlock {
+    height: 100vh;
+  }
+
+  .aboveNavbar {
+    height: 0;
+  }
+
+  .feeling {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .feelingimage {
+    padding-top: 1em;
+  }
+
+  .feelingcontent {
+    width: 100vw;
   }
 }

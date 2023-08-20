@@ -326,6 +326,7 @@ function StudentHome() {
   const [timeTable, setTimeTable] = useState(false);
   const [attendaceReport, setAttendaceReport] = useState(false);
   const [semesterRegistration, setSemRegistrationData] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true);
 
   const handleClick = () => {};
 
@@ -343,116 +344,142 @@ function StudentHome() {
             </h4>
           </div>
           <span style={{ fontSize: 1.6 + "em", color: "white" }}>Student</span>
-          <div>
-            <button
-              className="personalizedcontent"
-              onClick={() => (window.location.href = "/Student/StudentHome")}
-            >
-              Home
-            </button>
-            <button
-              className="personalizedcontent"
-              onClick={() => {
-                setAcademicProgress(false);
-                setAttendaceReport(false);
-                setTimeTable(false);
 
-                setSemRegistrationData(false);
-                setProfile(!profile);
-              }}
-            >
-              Profile
-            </button>
-            {/**
-             *
-             *
-             *
-             */}
+          <div className="navbarFunctions">
+            {openMenu ? (
+              <>
+                <button
+                  className="openMenu"
+                  onClick={(e) => {
+                    setOpenMenu(!openMenu);
+                  }}
+                >
+                  x
+                </button>
+                <button
+                  className="personalizedcontent"
+                  onClick={() =>
+                    (window.location.href = "/Student/StudentHome")
+                  }
+                >
+                  Home
+                </button>
+                <button
+                  className="personalizedcontent"
+                  onClick={() => {
+                    setAcademicProgress(false);
+                    setAttendaceReport(false);
+                    setTimeTable(false);
 
-            <button
-              className="personalizedcontent"
-              onClick={(e) => {
-                e.preventDefault();
-                setProfile(false);
-                setAttendaceReport(false);
-                setTimeTable(false);
+                    setSemRegistrationData(false);
+                    setProfile(!profile);
+                  }}
+                >
+                  Profile
+                </button>
+                {/**
+                 *
+                 *
+                 *
+                 */}
 
-                setSemRegistrationData(false);
-                setAcademicProgress(!academicProgress);
-              }}
-            >
-              Academic Progress
-            </button>
-            {/***
-             * sem
-             * cards
-             * 4 cards , bifurcated
-             */}
-            <button
-              className="personalizedcontent"
-              onClick={(e) => {
-                e.preventDefault();
-                setAcademicProgress(false);
-                setAttendaceReport(false);
-                setTimeTable(false);
+                <button
+                  className="personalizedcontent"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setProfile(false);
+                    setAttendaceReport(false);
+                    setTimeTable(false);
 
-                setProfile(false);
-                setSemRegistrationData(!semesterRegistration);
-              }}
-            >
-              Semester Registration
-            </button>
-            {/**
-             * challan no
-             * semester
-             * year
-             * Register
-             * */}
-            <button
-              className="personalizedcontent"
-              onClick={(e) => {
-                e.preventDefault();
-                setAcademicProgress(false);
-                setAttendaceReport(false);
-                setProfile(false);
+                    setSemRegistrationData(false);
+                    setAcademicProgress(!academicProgress);
+                  }}
+                >
+                  Academic Progress
+                </button>
+                {/***
+                 * sem
+                 * cards
+                 * 4 cards , bifurcated
+                 */}
+                <button
+                  className="personalizedcontent"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setAcademicProgress(false);
+                    setAttendaceReport(false);
+                    setTimeTable(false);
 
-                setSemRegistrationData(false);
-                setTimeTable(!timeTable);
-              }}
-            >
-              Time Table
-            </button>
-            <button
-              className="personalizedcontent"
-              onClick={(e) => {
-                e.preventDefault();
-                setAttendaceReport(!attendaceReport);
-                setAcademicProgress(false);
-                setProfile(false);
-                setTimeTable(false);
+                    setProfile(false);
+                    setSemRegistrationData(!semesterRegistration);
+                  }}
+                >
+                  Semester Registration
+                </button>
+                {/**
+                 * challan no
+                 * semester
+                 * year
+                 * Register
+                 * */}
+                <button
+                  className="personalizedcontent"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setAcademicProgress(false);
+                    setAttendaceReport(false);
+                    setProfile(false);
 
-                setSemRegistrationData(false);
-              }}
-            >
-              Attendance Report
-            </button>
-            <button
-              className="personalizedcontent"
-              onClick={() => {
-                fetch("/logout")
-                  .then((response) => {
-                    if (response.ok) {
-                      console.log("Logged Out");
-                      window.location.href = "/";
-                    }
-                  })
-                  .catch((error) => {
-                    console.log(error);
-                  });
-              }}
-            >
-              Log Out
-            </button>
+                    setSemRegistrationData(false);
+                    setTimeTable(!timeTable);
+                  }}
+                >
+                  Time Table
+                </button>
+                <button
+                  className="personalizedcontent"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setAttendaceReport(!attendaceReport);
+                    setAcademicProgress(false);
+                    setProfile(false);
+                    setTimeTable(false);
+
+                    setSemRegistrationData(false);
+                  }}
+                >
+                  Attendance Report
+                </button>
+                <button
+                  className="personalizedcontent"
+                  onClick={() => {
+                    fetch("/logout")
+                      .then((response) => {
+                        if (response.ok) {
+                          console.log("Logged Out");
+                          window.location.href = "/";
+                        }
+                      })
+                      .catch((error) => {
+                        console.log(error);
+                      });
+                  }}
+                >
+                  Log Out
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  className="openMenu out"
+                  onClick={(e) => {
+                    setOpenMenu(!openMenu);
+                  }}
+                >
+                  &#x2630;
+                </button>
+              </>
+            )}
           </div>
         </div>
         <div className="studentBody">
